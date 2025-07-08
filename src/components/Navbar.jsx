@@ -35,10 +35,10 @@ const Navbar = () => {
           <img src={assets.cross_icon} alt="close mobile menu" className="w-6"/>
         </div>
         <ul className="flex flex-col items-center justify-center gap-2 mt-5 px-5 text-lg font-medium">
-          <a href="#header" className="px-4 py-2 rounded-full inline-block">Home</a>
-          <a href="#about" className="px-4 py-2 rounded-full inline-block">About</a>
-          <a href="#projects" className="px-4 py-2 rounded-full inline-block">Projects</a>
-          <a href="#testimonials" className="px-4 py-2 rounded-full inline-block">Testimonails</a>
+          <a href="#header" className="px-4 py-2 rounded-full inline-block" onClick = {() => setShowMobileMenu(false)} >Home</a>
+          <a href="#about" className="px-4 py-2 rounded-full inline-block" onClick = {() => setShowMobileMenu(false)} >About</a>
+          <a href="#projects" className="px-4 py-2 rounded-full inline-block" onClick = {() => setShowMobileMenu(false)} >Projects</a>
+          <a href="#testimonials" className="px-4 py-2 rounded-full inline-block" onClick = {() => setShowMobileMenu(false)} >Testimonails</a>
         </ul>
       </div>
     </div>

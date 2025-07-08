@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  useEffect(() => {
+    if(showMobileMenu) 
+      {document.body.style.overflow = "hidden"} 
+    else 
+      {document.body.style.overflow = "auto"} 
+    return () => {
+      document.body.style.overflow = "auto"; // Reset overflow when component unmounts (NEW FOR ME)
+    }}, 
+    [showMobileMenu]
+  )
 
   return (
     <div>

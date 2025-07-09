@@ -30,7 +30,7 @@ const Navbar = () => {
         <img src={assets.menu_icon} className={`${showMobileMenu ? "hidden" : "md:hidden"} w-7 cursor-pointer`} alt="menu" onClick={() => setShowMobileMenu(true)}/>
       </div>
       {/* mobile menu */}
-      <div className={`${showMobileMenu ? "fixed w-full" : "w-0 h-0"}  right-0 top-0 bottom-0 overflow-hidden transition-all z-11 bg-white`}> 
+      <div className={`${showMobileMenu ? "fixed w-full" : "w-0 h-0"}  right-0 top-0 bottom-0 overflow-hidden transition-all z-20 bg-white`}> 
         <div className="flex justify-end p-6 cursor-pointer" onClick = {() => setShowMobileMenu(false)}> {/* CLOSE ICON*/}
           <img src={assets.cross_icon} alt="close mobile menu" className="w-6"/>
         </div>

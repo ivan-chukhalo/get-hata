@@ -35,7 +35,7 @@ export const assets = {
 
 export const projectsData = [
     {
-      title: "Fountains of Sophistication",
+      title: "Fountains of Dreams",
       price: "$2 500 000",
       location: "Preobrazhenska",
       image: project_img_1

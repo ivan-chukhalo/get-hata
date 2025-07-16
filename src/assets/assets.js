@@ -73,7 +73,7 @@ export const projectsData = [
     
   ];
 
-  export const testimonialsData = [
+  export const testimonailsData = [
     {
         name: "Lubomyr Varenyk",
         title: "Rain Tent Coordinator for Rural Weddings",

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {toast} from "react-toastify";
 
 const Contact = () => {
 
@@ -19,10 +20,12 @@ const Contact = () => {
 
     const data = await response.json();
     if (data.success){
-      setResult("Message sent successfully!");
+      toast.success("Message sent successfully!");
+      setResult(""); // we set this result to that button will display "Send Message" again because of operator "||" in button
       event.target.reset();
     } else {
-      setResult(data.message);
+      toast.error("Error sending your message. Please try again later.");
+      setResult(""); // we set this result to that button will display "Send Message" again because of operator "||" in button
       console.error("Error:", data.message);
     }
   }
@@ -77,7 +80,7 @@ const Contact = () => {
           ></textarea>
         </div>
         <button className="bg-blue-500 text-white py-2 px-12 mb-10 rounded">
-          Send Message
+          {result || "Send Message"}
         </button>
       </form>
     </div>

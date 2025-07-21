@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Testimonails from "./components/Testimonails";
 import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Projects />
       <Testimonails />
       <Contact />
+      <Footer />
     </div>
   );
 };

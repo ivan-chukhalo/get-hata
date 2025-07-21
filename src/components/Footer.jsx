@@ -29,7 +29,9 @@ const Footer = () => {
             </div>
         </div>
       </div>
-      <div></div>
+      <div className="text-center mt-10 text-gray-500 py-4 border-t border-gray-700">
+        Copyright © 2025 Hata Company. All rights reserved.
+      </div>
     </div>
   );
 };

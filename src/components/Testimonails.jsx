@@ -3,7 +3,7 @@ import { assets, testimonailsData } from "../assets/assets";
 const Testimonails = () => {
   return (
     <div
-      id="#testimonails"
+      id="#testimonials"
       className="conainer mx-auto py-10 lg:px-32 w-full overflow-hidden"
     >
       <h1 className="text-2xl sm:text-4xl front-bold mb-2 text-center">

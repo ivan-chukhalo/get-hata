@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import { assets, projectsData } from "../assets/assets";
+import { motion } from "motion/react"; // Importing motion for animations
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,7 +31,11 @@ const Projects = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{opacity: 0, x: -200,}} // Initial animation properties
+      whileInView={{opacity: 1, x: 0,}} // Fade in when the element enters the viewport:
+      transition={{ duration: 1, ease: "easeInOut" }} 
+      viewport={{ once: true }}  // It defines how the element is tracked within the viewport. In this case, animation will only happen once when the component is in view
       className="container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 my-20 w-full overflow-hidden"
       id="projects"
     >
@@ -87,7 +92,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {toast} from "react-toastify";
+import {motion} from "motion/react";
 
 const Contact = () => {
 
@@ -31,7 +32,11 @@ const Contact = () => {
   }
 
   return (
-    <div
+    <motion.div
+      initial={{opacity: 0, x: -200,}} // Initial animation properties
+      whileInView={{opacity: 1, x: 0,}} // Fade in when the element enters the viewport:
+      transition={{ duration: 1, ease: "easeInOut" }} 
+      viewport={{ once: true }}  // It defines how the element is tracked within the viewport. In this case, animation will only happen once when the component is in view
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
       id="contact"
     >
@@ -83,7 +88,7 @@ const Contact = () => {
           {result || "Send Message"}
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

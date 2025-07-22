@@ -1,8 +1,13 @@
 import { assets } from "../assets/assets";
+import {motion} from "motion/react";
 
 const About = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x: 200,}} // Initial animation properties
+    whileInView={{opacity: 1, x: 0,}} // Fade in when the element enters the viewport:
+    transition={{ duration: 1, ease: "easeInOut" }} 
+    viewport={{ once: true }}  // It defines how the element is tracked within the viewport. In this case, animation will only happen once when the component is in view
       className="flex flex-col items-center justify-center container mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden"
       id="about"
     >
@@ -55,7 +60,7 @@ const About = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

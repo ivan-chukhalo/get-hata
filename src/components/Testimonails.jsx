@@ -1,14 +1,14 @@
-import { assets, testimonailsData } from "../assets/assets";
+import { assets, testimonialsData } from "../assets/assets";
 import { motion } from "motion/react";
 
-const Testimonails = () => {
+const Testimonials = () => {
   return (
     <motion.div
       initial={{opacity: 0, x: 200,}} // Initial animation properties
       whileInView={{opacity: 1, x: 0,}} // Fade in when the element enters the viewport:
       transition={{ duration: 1, ease: "easeInOut" }} 
       viewport={{ once: true }}  // It defines how the element is tracked within the viewport. In this case, animation will only happen once when the component is in view
-      id="#testimonials"
+      id="testimonials"
       className="conainer mx-auto py-10 lg:px-32 w-full overflow-hidden"
     >
       <h1 className="text-2xl sm:text-4xl front-bold mb-2 text-center">
@@ -21,7 +21,7 @@ const Testimonails = () => {
         Reasl Stories from Those Who Found Home with Us
       </p>
       <div className="flex flex-wrap justify-center gap-8">
-        {testimonailsData.map((testimonail, index, arr) => (
+        {testimonialsData.map((testimonail, index, arr) => (
           <div
             key={index}
             className="max-w-80 border shadow-lg rounded px-8 py-12 text-center"
@@ -50,4 +50,4 @@ const Testimonails = () => {
   );
 };
 
-export default Testimonails;
+export default Testimonials;
